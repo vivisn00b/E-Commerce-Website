@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== =====>> Css Variables  <<===== =====  */
+:root {
+    /* =====>>  Font Color  <<===== */
+    --f1-color: #fff;
+    --f2-color: #000;
+    --f3-color: rgba(0, 0, 0, 0.8);
+    --f4-color: rgba(0, 0, 0, 0.6);
+    --f5-color: #0099cc;
+    --f6-color: #88cee6;
+    --f7-color: #f15723;
+
+    /* =====>>  Background Color  <<===== */
+    --bg1-color: #fff;
+    --bg2-color: #000;
+    --bg3-color: #33ccff;
+    --bg4-color: #33cc33;
+    --bg5-color: #0099cc;
+    --bg6-color: rgba(0, 0, 0, 0.4);
+    --bg7-color: rgba(0, 0, 0, 0.2);
+    --bg8-color: #e3e6f3;
+    --bg9-color: #042f67;
+    --glass-bg: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.3));
+    --C-lg-bg: linear-gradient(45deg, #ff3399, #ff9933);
+
+    /* ===== =====>>  Font Size  <<===== =====  */
+    --xxxl-fs: 2.2rem;
+    --xxl-fs: 1.8rem;
+    --xl-fs: 1.6rem;
+    --l-fs: 1.4rem;
+    --m-fs: 1.2rem;
+    --s-fs: 1.1rem;
+    --xs-fs: 1rem;
+
+    /* =====>>  Margin  <<===== */
+    --m-2-5: 2.5rem;
+    --m-1-8: 1.8rem;
+    --m-1-5: 1.5rem;
+    --m-0-6: 0.6rem;
+    --m-0-5: 0.5rem;
+    --m-0-3: 0.3rem;
+
+    /* =====>>  Padding  <<===== */
+    --p-2-5: 2.5rem;
+    --p-1-5: 1.5rem;
+    --p-1-0: 1rem;
+    --p-0-8: 0.8rem;
+    --p-0-5: 0.5rem;
+    --p-0-4: 0.4rem;
+    --p-0-3: 0.3rem;
+}
+
+/* ===== =====>>  Main-Container Css  <<===== =====  */
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "my_profile my_profile"
+        "userProfile userDetails"
+        "work_skills userDetails";
+    background: var(--glass-bg);
+    padding: var(--p-2-5);
+}
+
+/* ===== =====>>  Container Cards Grid-Area Css Start  <<===== =====  */
+.my_profile {
+    grid-area: my_profile;
+}
+
+.userProfile {
+    grid-area: userProfile;
+}
+
+.work_skills {
+    grid-area: work_skills;
+}
+
+.userDetails {
+    grid-area: userDetails;
+}
+
+/* ===== =====>>  Container Cards Css  <<===== =====  */
+.container .card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(3rem);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.078);
+    padding: var(--p-2-5);
+}
+
+/* ===== =====>>  Container Header/Navbar Css  <<===== =====  */
+.container .my_profile {
+    padding: 0 0 var(--p-2-5) 0;
+}
+
+.container .my_profile .brandLogo {
+    display: flex;
+    align-items: center;
+}
+
+.container .my_profile .brandLogo figure img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.container .my_profile .brandLogo span {
+    font-size: var(--xxxl-fs);
+    font-weight: 700;
+    color: var(--bg9-color);
+}
+
+/* ===== =====>>  User Main-Profile Css Start  <<===== ===== */
+.container .userProfile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
+}
+
+.container .userProfile .profile figure img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+}
+
+/* ===== =====>>  Work & Skills Css Start  <<===== ===== */
+.container .work {
+    display: flex;
+    justify-content: center;
+    padding: var(--p-0-3);
+}
+
+.work_skills .work .secondary {
+    width: 98%;
+    padding: var(--p-0-5) var(--p-1-0);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--xs-fs);
+    color: var(--f7-color);
+    border-radius: 0.4rem;
+}
+
+.work_skills .work .secondary.active {
+    background-color: var(--bg9-color);
+}
+
+.work_skills .work .secondary:hover {
+    background-color: var(--bg8-color);
+}
+
+/* ===== =====>>  User Details Css Start  <<===== ===== */
+.userDetails {
+    position: relative;
+    margin: 0 0 0 var(--p-1-0);
+}
+
+.userDetails .userName h1 {
+    font-size: var(--xxxl-fs);
+}
+
+.userDetails .userName {
+    margin-bottom: var(--m-2-5);
+}
+
+.userDetails .userName .date_joined {
+    font-size: var(--xs-fs);
+    font-weight: 600;
+    color: var(--f6-color);
+}
+
+.userDetails .userName p {
+    font-size: var(--l-fs);
+    font-weight: 700;
+    color: var(--f5-color);
+}
+
+.userDetails .order_no {
+    position: relative;
+    margin-bottom: var(--m-2-5);
+}
+
+.userDetails .order_no {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "total_orders total_item wishlisted_items";
+}
+
+.userDetails .contact .heading,
+.userDetails .contact2 .heading {
+    font-size: var(--xs-fs);
+    color: var(--f4-color);
+    text-transform: uppercase;
+    margin-bottom: var(--m-0-6);
+    margin-top: var(--m-1-5);
+}
+
+.userDetails .contact ul div {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+            "phone email"
+            "address address";
+    padding-bottom: var(--p-0-5);
+}
+
+.userDetails .contact2 ul div {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+            "birthday sex";
+}
+
+.userDetails .order_no span {
+    font-size: var(--xl-fs);
+    font-weight: 700;
+}
+
+
+/* Edit Profile Page*/
+.pfp-form .media {
+    display: block;
+    margin-bottom: var(--m-2-5);
+}
+
+.pfp-form .media .pfp-flex {
+    display: flex;
+}
+
+.pfp-form .media img{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+}
+
+.media-body{
+    padding: 2rem var(--p-2-5);
+}
+
+.media-body p {
+    padding-bottom: var(--p-0-5);
+}
+
+.pfpAttach {
+    padding: 5px 12px;
+    cursor: pointer;
+    background-color: var(--bg5-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.file-attachment {
+    display: none;
+}
+
+.pfpAttach:hover {
+    background-color: var(--bg3-color);
+}
+
+.del-btn {
+    padding: 5px 12px;
+    cursor: pointer;
+    background-color: #e4e6e7;
+    color: #77838f;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-left: var(--m-0-6);
+}
+
+.del-btn:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.prof-info-form .profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.prof-info-form form :where(input, select, textarea) {
+    line-height: 1.5;
+    padding: var(--p-0-8) var(--p-1-0);
+    border: 1px solid #004bae;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.prof-info-form form :where(input, select, textarea):focus {
+    border-color: var(--f7-color);
+}
+
+.profile-info .f-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info .f-pad-grid {
+    padding: var(--p-0-5) 0;
+}
+
+.prof-info-form form .dob-g {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+}
+
+.prof-info-form form .ph-email {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.profile-info .gender,
+.profile-info .email-id {
+    padding-left: 30px;
+}
+
+.userDetails .form-btn {
+    padding-top: var(--p-1-5);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userDetails .submit-btn {
+    padding: 8px 18px;
+    cursor: pointer;
+    background-color: #0b9d8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.profile-info .submit-btn:hover {
+    background-color: #097e6f;
+    scale: 1.05;
+}
+
+.userDetails .reset-btn {
+    padding: 8px 18px;
+    cursor: pointer;
+    background-color: #fd5b25;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-left: var(--m-0-6);
+}
+
+.profile-info .reset-btn:hover {
+    background-color: red;
+    scale: 0.9;
+}

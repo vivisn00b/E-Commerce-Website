@@ -1,0 +1,97 @@
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 12px;
+  }
+
+  .profile .mini-text {
+    display: none;
+  }
+
+  /* Edit Profile Page */
+
+  .media-body {
+    padding: 0 0 0 40px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  html {
+    font-size: 9px;
+  }
+
+  /* ===== =====>>  Container Css Start  <<===== ===== */
+  .container {
+    overflow-x: hidden;
+    overflow-y: inherit;
+    padding: 0;
+  }
+
+  /* ===== =====>>  Container Card Css Start  <<===== ===== */
+  .profile .mini-text {
+    display: none;
+  }
+
+  .container .card {
+    backdrop-filter: none;
+    padding: 10px;
+  }
+
+  .userDetails, 
+  .work_skills {
+    margin-bottom: 3rem;
+  }
+
+  .container::before,
+  .container::after {
+    display: none;
+  }
+
+  .userDetails .order_no {
+    display: block;
+  }
+
+  .order_no .order_no_items{
+    padding-bottom: 5px;
+  }
+
+  .userDetails .contact ul div {
+    display: block;
+    padding: 0;
+  }
+  /* ===== =====>>  Header/Navbar Css Start  <<===== ===== */
+  .container .my_profile {
+    padding-left: 10px;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+  } 
+
+  /* Edit Profile Page */
+
+  .media-body {
+    padding: 0;
+  }
+
+  .pfp-form .media .pfp-flex {
+    display: block;
+  }
+
+  .del-btn {
+    font-size: 9px;
+    margin-left: 0.6rem;
+  }
+
+  .prof-info-form form .dob-g,
+  .prof-info-form form .ph-email {
+    display: block;
+  }
+
+  .profile-info .gender,
+  .profile-info .email-id {
+    padding-left: 0;
+  }
+
+  .submit-btn,
+  .reset-btn {
+      font-size: 9px;
+    }
+}
